@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>moves control</title>
+
+
+<style>
+.myDiv {
+    text-align:center;
+    background: rgb(255,255,221);
+    background: linear-gradient(135deg, rgba(255,255,221,1) 8%, rgba(211,209,255,1) 81%);
+	font-family:font-family: "Kalam", Handwiting;
+	font-size:23px ;
+	padding:20px;
+	margin: 180px;
+}
+
+body{
+background: rgb(211,209,255);
+background: linear-gradient(135deg, rgba(211,209,255,1) 5%, rgba(255,255,221,1) 80%);
+}
+
+.button {
+  background: rgb(255,255,221);
+  background: linear-gradient(135deg, rgba(255,255,221,1) 8%, rgba(211,209,255,1) 81%);
+  border: non;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 12px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.button .b1{
+margin: 13px 8px;
+}
+.button .b2{
+margin: 13px 8px;
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+<div class="myDiv">
+   <h2>robot moves</h2>
+  <form method="post" action="RMsql.php">
+ 
+<div class="b1"><input class="button" type="submit"  name="fr" value="forword"></div><br>
+<input class="button" type="submit" name="le" value="left">
+<input class="button" type="submit"  name="st" value="stop">
+<input class="button" type="submit" name="ri" value="right"><br>
+<br><div class="b2"><input class="button" type="submit"  name="ba" value="backword"></div>
+
+</form>
+</div>
+
+
+</body>
+</html>

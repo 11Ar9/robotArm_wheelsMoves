@@ -1,0 +1,106 @@
+<!-- <? php
+
+
+$con=mysql_connect("localhost","root","","racontrol");
+
+if($con) echo "connection";
+else die("database error: :.mysql_connect_error());
+
+if($_POST['sv']);{
+$m1=$_POST['r1'];
+$m2=$_POST['r2'];
+$m3=$_POST['r3'];
+$m4=$_POST['r4'];
+$m5=$_POST['r5'];
+$sql="INSERT INTO `arcon` (`r1`,`r2`,`r3`,`r4`,`r5`)  VALUES (`$m1`,`$m2`,`$m3`,`$m4`,`$m5`)"
+
+if (mysqli_query($con,$sql)) echo "data added"
+
+else "error";
+
+}
+?>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta charset="windows-1256"> -->
+<title>robot Arm</title>
+<!-- <meta thhp-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+<style>
+.myDiv {
+ 
+  /*
+  position: absolute;
+  top: 250px;
+  right: 400px;
+  width: 500px;
+  height: 250px;
+  background-color: white;
+  text-align: center;*/
+  
+    text-align:center;
+	background-color:white;
+	font-family:font-family: "Kalam", Handwiting;
+	font-size:23px ;
+	padding:20px;
+	margin: 180px;
+}
+
+body{
+background: rgb(211,209,255);
+background: linear-gradient(135deg, rgba(211,209,255,1) 5%, rgba(255,255,221,1) 80%);
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="myDiv">
+   <h2>control Arm</h2>
+  <form action="RAsql.php" method="post">
+ <label for="r1">first motor base:  <input type="range" id="r1" name="r1" value="24" min="0" max="180" oninput="this.nextElementSibling.value = this.value">
+<output>24</output> <br></label><br>
+
+<label for="r2">second motor shoulder:  <input type="range" id="r2" name="r2" value="24" min="0" max="180" oninput="this.nextElementSibling.value = this.value">
+<output>24</output><br> </label><br>
+
+<label for="r3">third motor elbow:   <input type="range" id="r3" name="r3" value="24" min="0" max="180" oninput="this.nextElementSibling.value = this.value">
+<output>24</output> <br></label><br>
+
+<label for="r4"> fourth motor wrist:   <input type="range" id="r4" name="r4" value="24" min="0" max="180" oninput="this.nextElementSibling.value = this.value">
+<output>24</output> <br></label> <br>
+
+<label for="r5"> fourth motor gripper:   <input type="range" id="r5" name="r5" value="0" min="0" max="0" oninput="this.nextElementSibling.value = this.value">
+<output>0</output> <br></label><br>
+
+<!-- <button  class="button" type="submit" name="sv"> save</button>
+<button class="button" type="submit" name="run"> run</button> -->
+
+<input class="button" type="submit"  name="sv" value="save">
+<input class="button" type="submit" name="run" value="run">
+
+</form>
+</div>
+
+
+</body>
+</html>
